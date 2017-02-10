@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<customer>
+    <address>
+        <city>Utrecht</city>
+        <street>Jeanne d'Arcdreef 25</street>
+        <zip>3561 SB</zip>
+    </address>
+    <dateOfBirth>25 Juli 1994</dateOfBirth>
+    <name>Luuk van Houdt</name>
+</customer>
