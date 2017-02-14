@@ -1,0 +1,12 @@
+<postcodeResponse>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <adres>
+        <straatnaam>string</straatnaam>
+        <nummer>201</nummer>
+        <!--Optional:-->
+        <toevoeging>string</toevoeging>
+    </adres>
+    <postbus>201</postbus>
+    <plaats>string</plaats>
+    <postcode>string</postcode>
+</postcodeResponse>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://lsvh.org/postcodeType">
+    <xs:import namespace="http://lsvh.org/postcodeType" schemaLocation="postcodeTypes.xsd"/>
+    <xs:element name="postcodeRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="postcode" type="pt:postcodeType"/>
+                <xs:choice>
+                    <xs:element name="huisnummer">
+                        <xs:complexType>
+                            <xs:sequence>
+                                <xs:element name="nummer" type="pt:nummerType" minOccurs="1" maxOccurs="1"/>
+                                <xs:element name="toevoeging" type="pt:toevoegingType" minOccurs="0" maxOccurs="1"/>
+                            </xs:sequence>
+                        </xs:complexType>
+                    </xs:element>
+                    <xs:element name="postbus" type="pt:nummerType" minOccurs="1" maxOccurs="1"/>
+                </xs:choice>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

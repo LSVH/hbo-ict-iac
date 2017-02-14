@@ -1,0 +1,10 @@
+<postcodeRequest>
+    <postcode>string</postcode>
+    <!--You have a CHOICE of the next 2 items at this level-->
+    <huisnummer>
+        <nummer>201</nummer>
+        <!--Optional:-->
+        <toevoeging>string</toevoeging>
+    </huisnummer>
+    <postbus>201</postbus>
+</postcodeRequest>

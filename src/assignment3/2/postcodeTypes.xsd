@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://lsvh.org/postcodeType">
+    <xs:simpleType name="postcodeType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[1-9][0-9]{3}(\s)?[A-Za-z]{2}"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="nummerType">
+        <xs:restriction base="xs:positiveInteger">
+            <xs:minInclusive value="1"/>
+            <xs:maxInclusive value="99999"/>
+        </xs:restriction>
+    </xs:simpleType>
+    <xs:simpleType name="toevoegingType">
+        <xs:restriction base="xs:string">
+            <xs:pattern value="[A-Za-z]+"/>
+        </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
