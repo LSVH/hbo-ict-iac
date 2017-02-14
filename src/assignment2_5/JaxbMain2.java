@@ -18,7 +18,10 @@ public class JaxbMain2 {
         try {
 
             File file = new File("src" + File.separator + "assignment2_5" + File.separator + "customer_address.xml");
+
+            // Parse the XML context of the customer class.
             JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
+
 
             Unmarshaller jaxbUnmarshaller = jaxbContext.createUnmarshaller();
             Customer customer = (Customer) jaxbUnmarshaller.unmarshal(file);
