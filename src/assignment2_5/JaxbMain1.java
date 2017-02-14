@@ -27,12 +27,20 @@ public class JaxbMain1 {
         try {
 
             File file = new File("src" + File.separator + "assignment2_5" + File.separator + "customer_address.xml");
+
+            // Parse the XML context of the customer class.
             JAXBContext jaxbContext = JAXBContext.newInstance(Customer.class);
+
+            // Assemble the class
             Marshaller jaxbMarshaller = jaxbContext.createMarshaller();
 
+            // Prettify the output
             jaxbMarshaller.setProperty(Marshaller.JAXB_FORMATTED_OUTPUT, true);
 
+            // Write to the file
             jaxbMarshaller.marshal(customer, file);
+
+            // Print to console
             jaxbMarshaller.marshal(customer, System.out);
 
         } catch (JAXBException e) {
