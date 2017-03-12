@@ -1,0 +1,7 @@
+<res:results xmlns:res="http://lsvh.org/NormallyDistributed/Response">
+    <answer>true</answer>
+
+    <!--Optional:-->
+    <mu>1.25</mu>
+    <variance>0.24</variance>
+</res:results>

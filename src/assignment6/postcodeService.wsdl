@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:req="http://lsvh.org/postcodeServiceRequest"
+                  xmlns:res="http://lsvh.org/postcodeServiceResponse"
+                  name="postcodeService">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://lsvh.org/postcodeServiceRequest"
+                        schemaLocation="../assignment3/2/request.xsd"/>
+            <xsd:import namespace="http://lsvh.org/postcodeServiceResponse"
+                        schemaLocation="../assignment3/2/response.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+    <wsdl:message name="request">
+        <wsdl:part name="request" element="req:postcodeRequest"/>
+    </wsdl:message>
+    <wsdl:message name="response">
+        <wsdl:part name="response" element="res:postcodeResponse"/>
+    </wsdl:message>
+
+</wsdl:definitions>

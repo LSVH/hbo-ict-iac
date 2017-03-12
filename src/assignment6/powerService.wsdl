@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:req="http://lsvh.org/powerServiceRequest"
+                  xmlns:res="http://lsvh.org/powerServiceResponse"
+                  xmlns:srv="http://lsvh.org/powerService"
+                  name="powerService"
+                  targetNamespace="http://lsvh.org/powerService">
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://lsvh.org/powerServiceRequest" schemaLocation="../assignment3/1/request.xsd"/>
+            <xsd:import namespace="http://lsvh.org/powerServiceResponse"
+                        schemaLocation="../assignment3/1/response.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="request">
+        <wsdl:part name="request" element="req:PowerServiceRequest"/>
+    </wsdl:message>
+    <wsdl:message name="response">
+        <wsdl:part name="response" element="res:PowerServiceResponse"/>
+    </wsdl:message>
+
+    <wsdl:portType name="interface">
+        <wsdl:operation name="calculatePower">
+            <wsdl:input message="srv:request"/>
+            <wsdl:output message="srv:response"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="binding" type="srv:interface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http/"/>
+        <wsdl:operation name="calculatePower">
+            <soap:operation style="document" soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="powerService">
+        <wsdl:port name="port" binding="srv:binding">
+            <soap:address location="http://localhost:8080/soap/PowerService/"/>
+        </wsdl:port>
+    </wsdl:service>
+
+</wsdl:definitions>

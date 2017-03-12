@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://lsvh.org/NormallyDistributed/Response/">
+    <xs:annotation xml:lang="en">
+        <xs:appinfo>Define the structure of the responses</xs:appinfo>
+        <xs:documentation>
+            Return the results of the calculation what defines if the data set normally distributed.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:element name="results">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="answer" type="xs:boolean"/>
+                <xs:element name="mu" type="xs:float" minOccurs="0"/>
+                <xs:element name="variance" type="xs:float" minOccurs="0"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

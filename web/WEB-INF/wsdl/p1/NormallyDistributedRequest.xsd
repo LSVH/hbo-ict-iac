@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" targetNamespace="http://lsvh.org/NormallyDistributed/Request/">
+    <xs:annotation xml:lang="en">
+        <xs:appinfo>Define the structure of the requests</xs:appinfo>
+        <xs:documentation>
+            Submit a set of values representing your data set.
+        </xs:documentation>
+    </xs:annotation>
+    <xs:element name="values">
+        <xs:complexType>
+            <xs:sequence maxOccurs="unbounded">
+                <xs:element name="value">
+                    <xs:complexType>
+                        <xs:attribute name="x" type="xs:float" use="required"/>
+                        <xs:attribute name="y" type="xs:float" use="required"/>
+                    </xs:complexType>
+                </xs:element>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+</xs:schema>

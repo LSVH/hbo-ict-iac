@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:pt="http://lsvh.org/postcodeType">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:pt="http://lsvh.org/postcodeType"
+           targetNamespace="http://lsvh.org/postcodeServiceResponse">
     <xs:import namespace="http://lsvh.org/postcodeType" schemaLocation="postcodeTypes.xsd"/>
     <xs:element name="postcodeResponse">
         <xs:complexType>
