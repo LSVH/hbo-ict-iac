@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/"
+                  xmlns:http="http://schemas.xmlsoap.org/wsdl/http/"
+                  xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+                  xmlns:req="http://lsvh.org/NormallyDistributed/Request/"
+                  xmlns:res="http://lsvh.org/NormallyDistributed/Response/"
+                  xmlns:tns="http://lsvh.org/NormallyDistributed/"
+                  name="NormallyDistributed"
+                  targetNamespace="http://lsvh.org/NormallyDistributed/">
+    <xsd:annotation xml:lang="en">
+        <xsd:appinfo>The service contract</xsd:appinfo>
+        <xsd:documentation>
+            This service checks if the submitted data set is normally distributed.
+        </xsd:documentation>
+    </xsd:annotation>
+
+    <wsdl:types>
+        <xsd:schema>
+            <xsd:import namespace="http://lsvh.org/NormallyDistributed/Request/"
+                        schemaLocation="NormallyDistributedRequest.xsd"/>
+            <xsd:import namespace="http://lsvh.org/NormallyDistributed/Response/"
+                        schemaLocation="NormallyDistributedResponse.xsd"/>
+        </xsd:schema>
+    </wsdl:types>
+
+    <wsdl:message name="calculateNormalDistributionRequest">
+        <wsdl:part name="parameters" element="req:values"/>
+    </wsdl:message>
+    <wsdl:message name="calculateNormalDistributionResponse">
+        <wsdl:part name="parameters" element="res:results"/>
+    </wsdl:message>
+
+    <wsdl:portType name="NormallyDistributed">
+        <wsdl:operation name="calculateNormalDistribution">
+            <wsdl:input message="tns:calculateNormalDistributionRequest"/>
+            <wsdl:output message="tns:calculateNormalDistributionResponse"/>
+        </wsdl:operation>
+    </wsdl:portType>
+
+    <wsdl:binding name="NormallyDistributedPortBinding" type="tns:NormallyDistributed">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http/"/>
+        <wsdl:operation name="calculateNormalDistribution">
+            <soap:operation soapAction=""/>
+            <wsdl:input>
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output>
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+
+    <wsdl:service name="NormallyDistributedService">
+        <wsdl:port name="NormallyDistributedPort" binding="tns:NormallyDistributedPortBinding">
+            <soap:address location="http://localhost:8080/services/p1"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

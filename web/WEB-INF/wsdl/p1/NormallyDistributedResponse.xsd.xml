@@ -1,7 +1,7 @@
-<res:results xmlns:res="http://lsvh.org/NormallyDistributed/Response">
-    <answer>true</answer>
+<res:results xmlns:res="http://lsvh.org/NormallyDistributed/Response/">
+    <answer>false</answer>
 
     <!--Optional:-->
-    <mu>1.25</mu>
-    <variance>0.24</variance>
+    <mu>1.213</mu>
+    <sd>1.512</sd>
 </res:results>

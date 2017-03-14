@@ -38,14 +38,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link Values.Value }
-     * 
-     */
-    public Values.Value createValuesValue() {
-        return new Values.Value();
-    }
-
-    /**
      * Create an instance of {@link Results }
      * 
      */

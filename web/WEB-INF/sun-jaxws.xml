@@ -3,6 +3,6 @@
 <endpoints xmlns='http://java.sun.com/xml/ns/jax-ws/ri/runtime' version='2.0'>
     <endpoint
             name='NormallyDistributed'
-            implementation='practical1.Webservice'
+            implementation='practical1.NormallyDistributedServiceImpl'
             url-pattern='/services/p1'/>
 </endpoints>

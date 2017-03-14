@@ -10,8 +10,8 @@
         <xs:complexType>
             <xs:sequence>
                 <xs:element name="answer" type="xs:boolean"/>
-                <xs:element name="mu" type="xs:float" minOccurs="0"/>
-                <xs:element name="variance" type="xs:float" minOccurs="0"/>
+                <xs:element name="mu" type="xs:double" minOccurs="0"/>
+                <xs:element name="sd" type="xs:double" minOccurs="0"/>
             </xs:sequence>
         </xs:complexType>
     </xs:element>
